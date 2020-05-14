@@ -1,0 +1,28 @@
+/* comment */
+h1 {
+    font-family: sans-serif;
+    background-color: #ddd;
+    /* 同じ値が続くなら省略可能 */
+    color: #000000;
+    font-size: 30px;
+}
+
+p {
+    /* comment */
+    font-family: "Avenir Next";
+    color: #0000ff
+}
+
+img {
+    width: 500px;
+    height: 200px;
+}
+
+li {
+    color: black;
+}
+
+/* put a full stop to apply setting to a class */
+.selected {
+    color: red;
+}

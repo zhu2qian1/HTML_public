@@ -1,0 +1,131 @@
+body {
+    font-family: "Avenir Next";
+}
+
+/*
+    複数のセレクタに同じCSSを適用するには指定したい要素をカンマで区切って
+    CSSを指定すれば良い
+*/
+input, textarea {
+    width: 400px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid #dee7ec;
+}
+
+li {
+    /* 黒点を消す */
+    list-style: none;
+}
+
+/*
+    .クラス名 要素名 とすればクラスの子要素である要素にのみCSSを適用できる
+    先頭のピリオド忘れに注意
+*/
+/*
+    paddingは borderの内側の余白 を作る
+    marginは borderの外側の余白 を作る
+    これらはボックスモデル という概念に基づいている
+    marginはpaddingと同様な余白の設定ができる(省エネ化できる)
+*/
+/*
+    input は1行のテキスト入力を受け取るための要素、終了タグは不要
+        type属性にsubmitを指定すると入力欄ではなく送信ボタンになる
+            ボタンに表示されるテキストは言語ローカライズされる
+        value属性を用いて表示テキストを変更できる
+    textarea は複数行のテキスト入力を受け取るための要素。これは終了タグが必要
+*/
+
+.contact-form {
+    padding-top: 100px;
+}
+
+.contact-submit {
+    background-color: #dee7ec;
+    color: #889eab;
+}
+
+.contents {
+    height: 500px;
+    margin-top: 100px;
+}
+
+.contents-item {
+    float: left;
+    margin-right: 40px;
+}
+
+.contents-item p {
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+.copy-container h1 {
+    font-size: 140px;
+}
+
+.copy-container h2 {
+    font-size: 60px;
+}
+
+.copy-container span {
+    color: #ff4a4a;
+}
+
+.header {
+    background-color: #26d0c9;
+    color: #fff;
+    height: 90px;
+}
+
+.header-list li {
+    /* 要素を左詰めにする*/
+    float: left;
+    padding: 33px 20px;
+}
+
+.header-logo {
+    font-size: 36px;
+    float: left;
+    /* paddingの書き方を省エネする */
+    /* 上下 左右 と設定する*/
+    padding: 20px 40px;
+    /*
+        上から時計回りに設定する
+        padding: 20px 10px 20px 10px;
+    */
+}
+
+.footer {
+    background-color: #2f5167;
+    color: #fff;
+    height: 120px;
+    padding: 40px;
+}
+
+.footer-list {
+    float: right;
+}
+
+.footer-list li {
+    padding-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 32px;
+    float: left;
+}
+
+.main {
+    padding: 100px 80px;
+}
+
+.section-title {
+    /* border-bottom: 線の太さ 線の種類 線の色 という構文で下線を引ける */
+    border-bottom: 2px solid #dee7ec;
+    font-size: 28px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+}

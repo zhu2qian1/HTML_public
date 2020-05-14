@@ -1,0 +1,97 @@
+<!--
+    html要素の中にhead要素とbody要素が必要
+    headにはページに関する情報、bodyには実際に表示する内容を書く
+-->
+
+<!--
+    改行される要素と改行されない要素
+    前後で改行が入り、親要素の幅いっぱいに広がる要素を ブロック要素 という
+        ex. div h1 p
+    それに対して改行しない要素を インライン要素 という
+        ex. span a
+-->
+
+<!-- htmlバージョンの宣言 -->
+<!DOCTYPE html>
+<html>
+
+<!-- headの内容はWebページに表示されない -->
+<!--
+    やること3つ
+    1. 文字コードの指定
+    2. ページのタイトル設定
+    3. CSSの読み込み
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Progate</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<!--
+    bodyはheader, main, footerから構成される
+    レイアウトはdiv要素で構成する class名をつける
+-->
+
+<body>
+    <div class="header">
+        <div class="header-logo">xx.com</div>
+        <div class="header-list">
+            <ul class="header-list">
+                <li>プログラミングとは</li>
+                <li>学べるレッスン</li>
+                <li>お問い合わせ</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="copy-container">
+            <!-- spanで囲んでcssで書式設定する -->
+            <h1>HELLO WORLD<span>.</span></h1>
+            <h2>プログラミングの世界へようこそ</h2>
+        </div>
+        <div class="contents">
+            <h3 class="section-title">学べるレッスン</h3>
+            <div class="contents-item">
+                <img src=https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/html.svg>
+                <p>HTML & CSS</p>
+            </div>
+            <div class="contents-item">
+                <img src=https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/php.svg>
+                <p>PHP</p>
+            </div>
+            <div class="contents-item">
+                <img src=https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/ruby.svg>
+                <p>Ruby</p>
+            </div>
+            <div class="contents-item">
+                <img src=https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/study/swift.svg>
+                <p>Swift</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h3 class="section-title">お問い合わせ</h3>
+            <p>メールアドレス（必須）</p>
+            <input>
+            <p>お問い合わせ内容（必須）</p>
+            <textarea></textarea>
+            <p>※必須項目は必ずご入力ください</p>
+            <input class="contact-submit" type="submit" value="送信">
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-logo">Progate</div>
+        <div class="footer-list">
+            <ul>
+                <li>会社概要</li>
+                <li>採用</li>
+                <li>お問い合わせ</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

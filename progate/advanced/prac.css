@@ -1,0 +1,176 @@
+/* 共通部分があるがそれぞれ小さい変化をつけたいときは要素に複数クラスを指定すると良い
+   ex. <div class="btn blue"></div>
+   (cssにて)
+   .btn {共通部分}
+   .blue {color: blue;}
+*/
+
+body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN";
+}
+
+a {
+    text-decoration: none;
+}
+
+.fa {
+    margin-right: 5px;
+}
+
+/* text-align center; と margin: 0 auto; の使い分け
+   広めのブロック要素は margin: 0 auto; を使い
+   インラインブロック要素などには text-align: center; を使うと良い
+*/
+
+/* headerはクラスではないことに注意 */
+header {
+    height: 65px;
+    /* rgbaを用いて背景色にアルファ値を追加 */
+    background-color: rgba(34, 49, 52, 0.9);
+}
+
+.header-left {
+    float: left;
+}
+
+.header-right {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* マウスホバー時など、状態変化についてのプロパティはtransitionで設定する
+       transition: TARGET TIME; の形式で指定する */
+    transition: all 0.5s;
+}
+
+.header-right :hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    /* インライン要素のクリック判定はテキスト上でしかないのだが、
+        ブロック化すればクリック判定可能範囲が広がる */
+    display: block;
+}
+
+.container {
+    width: 1170px;
+    padding: 0 15px;
+    /* 左右のmarginを自動にし、中央に寄せる */
+    margin: 0 auto;
+}
+
+.logo {
+    width: 124px;
+    margin-top: 20px;
+}
+
+/*header <> top*/
+
+.top-wrapper {
+    padding: 180px 0 100px 0;
+    background-image: url(https://prog-8.com/images/html/advanced/top.png);
+    /* 背景画像が繰り返し表示されてしまうのでbackground-sizeをcoverに設定する */
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+.top-wrapper h1 {
+    /* 透明度 1が不透明 */
+    opacity: 0.7;
+    font-size: 45px;
+    /* 文字間隔 */
+    letter-spacing: 5px;
+}
+
+.top-wrapper p {
+    opacity: 0.7;
+}
+
+.btn-wrapper {
+    margin: 20px 0;
+}
+
+.btn-wrapper p {
+    margin: 10px 0;
+}
+
+.btn {
+    /* ボタンは本来インライン要素だが、displayプロパティを変更することで
+       ブロック要素にしたりインラインブロック要素にすることができる
+       ちなみにインライン要素だとwidthとheightが指定できないなどちょっと不便 */
+    padding: 8px 24px;
+    color: white;
+    display: inline-block;
+    opacity: 0.8;
+    /* border-radiusを用いてボタンの角を丸くすることができる
+       数字が大きいほど丸い */
+    border-radius: 4px;
+}
+
+/* セレクタ :hover を使ってマウスホバー時に違うプロパティを適応することができる */
+.btn :hover {
+    opacity: 1;
+}
+
+.signup {
+    background-color: #239b76;
+}
+
+.facebook {
+    background-color: #3b5998; 
+    margin-right: 10px;
+}
+
+.twitter {
+    background-color: #55acee;
+}
+
+/*top <> lesson*/
+
+.lesson-wrapper {
+    height: 500px;
+    padding-bottom: 80px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.heading {
+    padding: 60px 0 30px 0;
+    color: #5f5d60;
+}
+
+.heading h2 {
+    font-weight: normal;
+}
+
+.lesson {
+    float: left;
+    /* 親クラスに対する割合で(相対的に)幅を決められる*/
+    width: 25%;
+}
+
+.lesson-icon {
+    /* position: relative; を用いて相対的に要素を配置できる */
+    position: relative;
+}
+
+.lesson-icon p {
+    /* 親のpositionアトリビュートがrelativeなのでその子要素にabsoluteを指定すると
+       親要素を基準とした位置を指定できる */
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    color: white;
+}
+
+.txt-contents {
+    width: 80%;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #b3aeb5;
+}
