@@ -144,6 +144,7 @@ header {
 }
 
 .heading h2 {
+    /* hタグはfont-weightがboldになっているのでnormalに戻しておく */
     font-weight: normal;
 }
 
@@ -175,9 +176,19 @@ header {
     color: #b3aeb5;
 }
 
+.message-wrapper {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
 .message {
     background-color: #5dca88;
     padding: 15px 40px;
+    /* cursorプロパティを用いてマウスホバー時のカーソルの形を変える */
+    cursor: pointer;
+    /* box-shadow VERT HORI COLOUR の形式で影をつけられる */
+    box-shadow: 0 7px #1a7940;
 }
 
 .heading h3 {
