@@ -28,6 +28,12 @@ header {
     height: 65px;
     /* rgbaを用いて背景色にアルファ値を追加 */
     background-color: rgba(34, 49, 52, 0.9);
+    /* position: fixed; で要素の位置を固定できる */
+    position: fixed;
+    top: 0;
+    /* z-index: int; の形式で要素の重なり順を指定できる
+       整数値のみ指定可能で、数値が大きいほど上に来る */
+    z-index: 10;
 }
 
 .header-left {
@@ -200,4 +206,17 @@ header {
 
 .heading h3 {
     font-weight: normal;
+}
+
+footer {
+    padding-top: 30px;
+}
+
+footer img {
+    width: 125px;
+}
+
+footer p {
+    color: #b3aeb5;
+    font-size: 12px;
 }
